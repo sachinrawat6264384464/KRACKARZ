@@ -1,0 +1,156 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    /* Krackerz Design System Tokens */
+    --color-1: #161616; /* Primary Dark Text / Dark surface */
+    --color-2: #0000EE; /* Electric Blue Accent */
+    --color-3: #C8FF2E; /* Electric Lime Green Accent */
+    --color-4: #F7F6F0; /* Warm Cream / Soft off-white surface */
+    --color-5: #FFFFFF; /* Pure White Background */
+
+    /* Typography Sizes */
+    --text-xs: 12px;
+    --text-sm: 14px;
+    --text-base: 16px;
+    --text-lg: 20px;
+    --text-xl: 56px;
+    --text-2xl: 72px;
+    --text-3xl: 80px;
+
+    /* Spacing Scale (4px base) */
+    --space-1: 4px;
+    --space-2: 6px;
+    --space-3: 8px;
+    --space-4: 10px;
+    --space-5: 12px;
+    --space-6: 16px;
+    --space-7: 20px;
+    --space-8: 21px;
+    --space-9: 24px;
+    --space-10: 28px;
+    --space-11: 32px;
+    --space-12: 40px;
+    --space-13: 64px;
+    --space-14: 80px;
+    --space-15: 100px;
+    --space-16: 110px;
+    --space-17: 160px;
+
+    /* Border Radius */
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+    --radius-xl: 24px;
+    --radius-full: 62px;
+
+    /* Elevation Shadows */
+    --shadow-sm: rgba(0, 0, 0, 0.07) 0px 0.301094px 0.421531px -0.583333px, rgba(0, 0, 0, 0.08) 0px 1.14427px 1.60197px -1.16667px, rgba(0, 0, 0, 0.13) 0px 5px 7px -1.75px;
+    --shadow-md: rgba(0, 0, 0, 0.08) 0px 0.482901px 1.25554px -1px, rgba(0, 0, 0, 0.12) 0px 4px 10.4px -2px;
+    --shadow-glow-lime: 0 0 25px rgba(200, 255, 46, 0.5);
+    --shadow-glow-blue: 0 0 25px rgba(0, 0, 238, 0.4);
+  }
+}
+
+body {
+  background-color: #ececec;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.08) 1px, transparent 1px);
+  background-size: 60px 60px;
+  color: var(--color-1);
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  overflow-x: hidden;
+}
+
+.bg-grid-pattern {
+  background-color: #ececec;
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.08) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+/* Custom Font Families */
+.font-krack-chunky {
+  font-family: 'Titan One', 'Changa One', 'Dela Gothic One', sans-serif;
+  letter-spacing: -0.02em;
+}
+
+.font-krack-script {
+  font-family: 'Caveat', cursive;
+}
+
+/* Custom Utilities for Token Classes */
+.bg-krack-dark { background-color: var(--color-1); }
+.bg-krack-blue { background-color: var(--color-2); }
+.bg-krack-lime { background-color: var(--color-3); }
+.bg-krack-cream { background-color: var(--color-4); }
+.bg-krack-white { background-color: var(--color-5); }
+
+.text-krack-dark { color: var(--color-1); }
+.text-krack-blue { color: var(--color-2); }
+.text-krack-lime { color: var(--color-3); }
+.text-krack-cream { color: var(--color-4); }
+.text-krack-white { color: var(--color-5); }
+
+.border-krack-dark { border-color: var(--color-1); }
+.border-krack-blue { border-color: var(--color-2); }
+.border-krack-lime { border-color: var(--color-3); }
+
+.shadow-krack-sm { box-shadow: var(--shadow-sm); }
+.shadow-krack-md { box-shadow: var(--shadow-md); }
+.shadow-glow-lime { box-shadow: var(--shadow-glow-lime); }
+.shadow-glow-blue { box-shadow: var(--shadow-glow-blue); }
+
+.rounded-krack-sm { border-radius: var(--radius-sm); }
+.rounded-krack-md { border-radius: var(--radius-md); }
+.rounded-krack-lg { border-radius: var(--radius-lg); }
+.rounded-krack-xl { border-radius: var(--radius-xl); }
+.rounded-krack-full { border-radius: var(--radius-full); }
+
+/* Keyframe Animations */
+@keyframes marquee-left {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes marquee-right {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0%); }
+}
+
+.animate-marquee-left {
+  display: flex;
+  width: max-content;
+  animation: marquee-left 28s linear infinite;
+}
+
+.animate-marquee-left:hover {
+  animation-play-state: paused;
+}
+
+/* Custom Wavy Edge Mask for Cards */
+.wavy-banner-cream {
+  background-color: #F7F6F0;
+  color: #161616;
+  clip-path: polygon(0% 12%, 10% 0%, 20% 12%, 30% 0%, 40% 12%, 50% 0%, 60% 12%, 70% 0%, 80% 12%, 90% 0%, 100% 12%, 100% 100%, 0% 100%);
+}
+
+.wavy-banner-burgundy {
+  background-color: #4A121A;
+  color: #FFFFFF;
+  clip-path: polygon(0% 12%, 10% 0%, 20% 12%, 30% 0%, 40% 12%, 50% 0%, 60% 12%, 70% 0%, 80% 12%, 90% 0%, 100% 12%, 100% 100%, 0% 100%);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--color-4);
+}
+::-webkit-scrollbar-thumb {
+  background: #161616;
+  border-radius: 4px;
+}
