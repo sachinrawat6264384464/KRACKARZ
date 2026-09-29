@@ -55,22 +55,22 @@ export default function Hero({ onOpenWaitlist, onScrollToStore }: HeroProps) {
   ];
 
   return (
-    <section className="relative pt-20 pb-10 md:pt-24 md:pb-14 bg-[#F7F6F0] text-[#161616] overflow-hidden border-b border-[#e5e4dc]">
-      {/* Multi-lobed Organic Cloud Background Shape matching Krackerz original */}
-      <div className="absolute top-0 left-0 right-0 h-[460px] pointer-events-none overflow-hidden z-0">
+    <section className="relative pt-24 pb-12 md:pt-28 md:pb-16 bg-[#F7F6F0] text-[#161616] overflow-hidden border-b border-[#e5e4dc]">
+      {/* Dynamic Multi-lobed Organic Cloud Background with Pronounced Waves & Dips */}
+      <div className="absolute top-0 left-0 right-0 h-[480px] pointer-events-none overflow-hidden z-0">
         <svg
           className="w-full h-full text-[#FFFFFF]"
-          viewBox="0 0 1440 460"
+          viewBox="0 0 1440 480"
           preserveAspectRatio="none"
           fill="currentColor"
         >
-          <path d="M 0,0 H 1440 V 160 Q 1300,320 1120,240 Q 940,160 720,380 Q 500,160 320,240 Q 140,320 0,160 Z" />
+          <path d="M 0,0 H 1440 V 160 C 1360,290 1250,310 1160,180 C 1060,50 960,60 880,240 C 790,420 650,440 560,260 C 470,80 370,70 280,230 C 190,390 80,360 0,180 Z" />
         </svg>
       </div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
         {/* Eyebrow Badge */}
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#161616] text-[#C8FF2E] text-[10px] font-black uppercase tracking-wider mb-5 shadow-sm hover:scale-105 transition-transform">
+        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#161616] text-[#C8FF2E] text-[10px] font-black uppercase tracking-wider mb-6 shadow-sm hover:scale-105 transition-transform">
           <div className="w-4 h-4 rounded-full bg-[#C8FF2E] text-[#161616] flex items-center justify-center font-black text-[9px]">
             ⌛
           </div>
@@ -78,13 +78,13 @@ export default function Hero({ onOpenWaitlist, onScrollToStore }: HeroProps) {
         </div>
 
         {/* Headline */}
-        <div className="max-w-4xl mx-auto mb-6 select-none">
+        <div className="max-w-4xl mx-auto mb-7 select-none">
           <h1 className="font-krack-chunky text-3xl sm:text-5xl md:text-6xl text-[#161616] uppercase leading-[1.0] tracking-tight">
             FOR THE STUFF
           </h1>
           <div className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 my-1">
             {/* Mascot Character "C" */}
-            <div className="w-10 h-10 sm:w-14 sm:h-14 bg-[#FF3B00] text-white rounded-xl flex items-center justify-center font-black text-xl sm:text-3xl border-2 border-[#161616] shadow-[2px_2px_0px_#161616] rotate-[-6deg] hover:rotate-0 transition-transform">
+            <div className="w-10 h-10 sm:w-14 sm:h-14 bg-[#FF3B00] text-white rounded-xl flex items-center justify-center font-black text-xl sm:text-3xl border-2 border-[#161616] shadow-[3px_3px_0px_#161616] rotate-[-6deg] hover:rotate-0 transition-transform">
               C👀
             </div>
 
@@ -107,10 +107,10 @@ export default function Hero({ onOpenWaitlist, onScrollToStore }: HeroProps) {
         </div>
 
         {/* Center CTA Button */}
-        <div className="flex items-center justify-center mb-10">
+        <div className="flex items-center justify-center mb-12">
           <button
             onClick={onOpenWaitlist}
-            className="flex items-center gap-2 px-5 py-2.5 bg-[#C8FF2E] text-[#161616] font-krack-chunky text-xs uppercase rounded-[62px] border border-[#161616] shadow-[2px_2px_0px_#161616] hover:translate-x-[-1px] hover:translate-y-[-1px] hover:shadow-[3px_3px_0px_#161616] transition-all"
+            className="flex items-center gap-2 px-6 py-3 bg-[#C8FF2E] text-[#161616] font-krack-chunky text-xs sm:text-sm uppercase rounded-[62px] border-2 border-[#161616] shadow-[3px_3px_0px_#161616] hover:translate-x-[-2px] hover:translate-y-[-2px] hover:shadow-[5px_5px_0px_#161616] transition-all"
           >
             <span>JOIN WAITLIST</span>
             <div className="w-4 h-4 rounded-full bg-[#FF3B00] text-white flex items-center justify-center font-bold text-[9px]">
@@ -119,9 +119,9 @@ export default function Hero({ onOpenWaitlist, onScrollToStore }: HeroProps) {
           </button>
         </div>
 
-        {/* 6 Hero Photo Cards with Scalloped Cloud Top Edge */}
-        <div className="relative max-w-6xl mx-auto pt-2">
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 items-end justify-center">
+        {/* 6 Hero Photo Cards - Positioned Lower towards section bottom */}
+        <div className="relative max-w-6xl mx-auto mt-6 sm:mt-10 md:mt-14 -mb-6 md:-mb-10">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3 sm:gap-4 items-end justify-center">
             {cards.map((card) => (
               <div
                 key={card.id}
